@@ -1,4 +1,4 @@
-# next.js 로 프로젝트 만들어보기
+# next.js Manual SetUP 프로젝트 만들어보기
 
 1. npm init -y 로 패키지 설치  
 2. npm i next react reac-dom 설치
