@@ -1,13 +1,25 @@
 import styles from '../styles/Home.module.css'
 import SanityService from '../servives/SanityService';
+import { Col, Row } from 'antd';
+import Link from 'next/Link';
+import { CodeOutlined } from '@ant-design/icons';
+import Header from '../components/Header';
+import BlogHeadline from '../components/BlogHeadline';
+import BlogMainPost from '../components/BlogMainPost';
+import BlogList from '../components/BlogList';
 
 export default function Home({home, posts}) {
-  console.log(home);
-  console.log(posts);
+  const mainPost = posts.find((p) => p.slug === home.mainPostUrl);
+  const otherPost = posts.filter((p) => p.slug !== home.mainPostUrl);
+  console.log(mainPost);
+  console.log(otherPost);
 
   return (
     <div className={styles.container}>
-      <h1>Blog Home</h1>
+      <Header/>
+      <BlogHeadline/>
+      <BlogMainPost {...mainPost}/>
+      <BlogList posts={otherPost}/>
     </div>
   )
 }
