@@ -4,7 +4,7 @@ export default class SanityService {
   _client = sanityClient({
     dataset: 'production',
     //santiy 고유한 프로젝트 아이디를 가져오면 된다.
-    projectId: 'xen9ujpt',
+    projectId: process.env.SANITY_PROJECT_ID,
     useCdn: process.env.NODE_ENV === "production",
   });
 
