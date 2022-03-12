@@ -1,8 +1,5 @@
 import styles from '../styles/Home.module.css'
 import SanityService from '../servives/SanityService';
-import { Col, Row } from 'antd';
-import Link from 'next/Link';
-import { CodeOutlined } from '@ant-design/icons';
 import Header from '../components/Header';
 import BlogHeadline from '../components/BlogHeadline';
 import BlogMainPost from '../components/BlogMainPost';

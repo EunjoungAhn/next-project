@@ -1,12 +1,17 @@
 import SanityService from '../../servives/SanityService';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import BlogPostDetail from '../../components/BlogPostDetail';
 
-export default function PostAll({slug, post}){
+export default function PostAll({slug, post, content}){
   console.log(post);
 
   //배열 값이 들어오기 때문에
   return (
     <div>
-      <h1>Post: {slug}</h1>
+      <Header/>
+      <BlogPostDetail blocks={content}/>
+      <Footer/>
     </div>
   )
 }
